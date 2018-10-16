@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+    <script src="library/phaser.min.js"></script>
+    <script src="src/preloadFile.js"></script>
+    <script src="src/menuFile.js"></script>
+    <script src="src/gameFile.js"></script>
+    <script src="src/winFile.js"></script>
+    <script src="src/loseFile.js"></script>
+
+    <script>
+        var game = new Phaser.Game(800, 600, Phaser.AUTO, "stackGame");
+        game.state.add("preloadState",preloadFunc);
+        game.state.add("menuState",menuFunc);
+        game.state.add("gameState",gameFunc);
+        game.state.add("winState",winFunc);
+        game.state.add("loseState",loseFunc);
+        game.state.start(" preloadState ");
+
+    </script>
+</head>
+<body>
+    <div id="stackGame"></div>
+</body>
+</html>
